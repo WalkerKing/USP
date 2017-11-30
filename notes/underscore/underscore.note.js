@@ -178,12 +178,12 @@
       // 即 arguments[1], arguments[2] ...
       for (var index = 1; index < length; index++) {
         // source 即为对象参数
-        var source = arguments[index],
+        var source = arguments[index], 
             // 提取对象参数的 keys 值
             // keysFunc 参数表示 _.keys
             // 或者 _.allKeys
             keys = keysFunc(source),
-            l = keys.length;
+            l = keys.length;          
 
         // 遍历该对象的键值对
         for (var i = 0; i < l; i++) {
@@ -198,7 +198,7 @@
           // 那么当且仅当 obj[key] 为 undefined 时才覆盖
           // 即如果有相同的 key 值，取最早出现的 value 值
           // *defaults 中有相同 key 的也是一样取首次出现的
-          if (!undefinedOnly || obj[key] === void 0)
+          if (!undefinedOnly || obj[key] === void 0)  //  如果没有传入undefinedOnly或者
             obj[key] = source[key];
         }
       }
